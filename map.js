@@ -30,7 +30,7 @@ var interactive_map = new InteractiveMap('map', {
 interactive_map.addTileLayer('Ingame map', {
     minNativeZoom: 1,
     maxNativeZoom: 4,
-    attribution: 'Map from <a href="https://www.example.com/index.html">$source</a>'
+    attribution: 'Map from <a href="https://www.roblox.com/games/3272915504/">Arcane Odyssey</a>'
 });
 
 // Step 2.5 (optional):
