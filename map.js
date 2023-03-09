@@ -28,7 +28,7 @@ var interactive_map = new InteractiveMap('map', {
 // https://github.com/commenthol/gdal2tiles-leaflet
 // `./gdal2tiles.py -l -p raster -w none -z 3-5 full_map.jpg map_tiles`
 interactive_map.addTileLayer('Ingame map', {
-    minNativeZoom: 2,
+    minNativeZoom: 1,
     maxNativeZoom: 4,
     attribution: 'Map from <a href="https://www.example.com/index.html">$source</a>'
 });
