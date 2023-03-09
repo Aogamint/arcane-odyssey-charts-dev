@@ -61,6 +61,8 @@ html, body, #map {
 
 .leaflet-container {
     background: url("https://raw.githubusercontent.com/Aogamint/arcane-odyssey-charts/main/sea.png");
+    background-size: 250px 250px;
+    background-repeat: repeat;
 }
 
 .is-fullwidth {

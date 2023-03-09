@@ -32,7 +32,7 @@ class InteractiveMap {
         let defaults = {
             maxClusterRadius: 20,
             attribution: '',
-            max_good_zoom: 5,
+            max_good_zoom: 1,
             website_source: '',
             website_subdir: '',
             max_map_zoom: 4
@@ -419,20 +419,6 @@ class InteractiveMap {
             title: 'Attributions',
             position: 'bottom',
             pane: `<h3>This project uses:</h3><ul>${attribution}${this.#common_attribution}</ul>`
-        });
-
-        this.#sidebar.addPanel({
-            id: 'visit-github',
-            tab: '<i class="fab fa-github"></i>',
-            position: 'bottom',
-            button: website
-        });
-
-        this.#sidebar.addPanel({
-            id: 'go-back',
-            tab: '<i class="fas fa-arrow-left"></i>',
-            position: 'bottom',
-            button: 'https://interactive-game-maps.github.io/'
         });
 
         // make group visible on pane opening

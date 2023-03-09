@@ -10,7 +10,7 @@
 // Initialize the map with basic information
 var interactive_map = new InteractiveMap('map', {
     // This will limit automatic zooming to this zoom level
-    max_good_zoom: 6,
+    max_good_zoom: 1,
     // This is the max zoom the map will allow
     max_map_zoom: 4,
     website_source: 'https://github.com/Aogamint/arcane-odyssey-charts',
@@ -50,7 +50,7 @@ addCollectibles(interactive_map);
 // Step 3.5 (optional):
 // Add more marker layer
 // See `marker_logic/information.js` for more advanced technics
-addInformation(interactive_map);
+//  addInformation(interactive_map);
 
 // Step 4:
 // Finalize the map after adding all layers.
