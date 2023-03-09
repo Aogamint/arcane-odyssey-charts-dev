@@ -135,7 +135,7 @@ html, body, #map {
 
 .leaflet-sidebar-tabs {
     display: flex;
-    overflow-y: scroll;
+    overflow-y: clip;
     flex-flow: column;
     scrollbar-width: none;
 }
