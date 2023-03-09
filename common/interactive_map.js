@@ -35,7 +35,7 @@ class InteractiveMap {
             max_good_zoom: 5,
             website_source: '',
             website_subdir: '',
-            max_map_zoom: 8
+            max_map_zoom: 4
         }
         let params = { ...defaults, ...args };
 
