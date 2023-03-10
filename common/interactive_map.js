@@ -184,7 +184,6 @@ class InteractiveMap {
 
         // Center view over map
         this.zoomToBounds(this.#getBounds());
-        console.info(this.getLayers())
 
         // hide all previously checked marker
         this.getLayers().forEach((layer, layer_id) => {
@@ -197,6 +196,9 @@ class InteractiveMap {
                 }
             });
         });
+
+        // Add an image overlay (mainly for map compass)
+        L.imageOverlay("common/compass.png",[[-195,-45],[-150,0]]).addTo(this.#map);
 
         // Search in url for marker and locate them
         const queryString = window.location.search;
