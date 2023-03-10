@@ -6,28 +6,34 @@ class ShareMarker extends L.Marker {
      * Clicking on the map sets a marker that can be shared.
      * @param {InteractiveMap} interactive_map Interactive map
      */
+
     constructor(interactive_map) {
         super([0, 0], {
             icon: Utils.getCustomIcon('fa-share-alt'),
             riseOnHover: true,
-            draggable: true,
+            draggable: false,
             pmIgnore: true
         });
 
         this.#interactive_map = interactive_map;
         this.#map = this.#interactive_map.getMap();
 
+        var coord = '';
         this.on('moveend', this.removeHighlight);
         this.on('moveend', event => {
             history.replaceState({}, "", `?share=${event.target._latlng.lng},${event.target._latlng.lat}`);
         });
+        
+        this.on('click', event => {
+            coord = event.latlng.lat + " " + event.latlng.lng
+        })
 
         this.bindPopup(() => {
             var html = document.createElement('div');
 
             var title = document.createElement('h2');
             title.className = 'popup-title';
-            title.innerHTML = 'Share marker';
+            title.innerHTML = coord;
             html.appendChild(title);
 
             var button = document.createElement('button');
@@ -57,10 +63,12 @@ class ShareMarker extends L.Marker {
         this.#map.on('click', this.removeHighlight, this);
     }
 
+
     /**
      * Moves to share marker to a specific location.
      * @param {L.LatLng} latlng Coordinates
      */
+
     move(latlng) {
         this.setLatLng([latlng[0], latlng[1]]);
         this.addTo(this.#map);
