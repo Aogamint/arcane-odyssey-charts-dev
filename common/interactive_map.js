@@ -430,12 +430,12 @@ class InteractiveMap {
 
             this.#map.addLayer(this.#interactive_layers.get(event.id).getGroup());
             Utils.setHistoryState(event.id);
-            this.getShareMarker().removeMarker();
+            /*this.getShareMarker().removeMarker();*/
         });
 
         this.#sidebar.on('closing', () => {
             Utils.setHistoryState(undefined, undefined, this.#website_subdir);
-            this.getShareMarker().removeMarker();
+            /*this.getShareMarker().removeMarker();*/
         })
     }
 

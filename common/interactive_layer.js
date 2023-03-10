@@ -464,7 +464,7 @@ class InteractiveLayer {
         layer.bindPopup(content, { maxWidth: "auto" });
 
         layer.on('popupopen', event => {
-            this.#interactive_map.getShareMarker().removeMarker();
+            /*this.#interactive_map.getShareMarker().removeMarker();*/
             Utils.setHistoryState(this.id, feature.properties.id);
 
             // Listen for size changes and update when it does
@@ -474,7 +474,7 @@ class InteractiveLayer {
         }, this);
 
         layer.on('popupclose', event => {
-            this.#interactive_map.getShareMarker().prevent();
+            /*this.#interactive_map.getShareMarker().prevent();*/
             Utils.setHistoryState(undefined, undefined, this.#website_subdir);
             this.#resize_observer.disconnect();
         }, this);
