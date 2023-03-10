@@ -140,7 +140,7 @@ class CustomLayers {
 
         this.#edit_mode = true;
         this.#hideControls();
-        this.#interactive_map.getShareMarker().turnOff();
+        /*this.#interactive_map.getShareMarker().turnOff();*/
         Utils.setHistoryState(undefined, undefined, this.#website_subdir);
 
         this.#map.on('pm:create', event => {
@@ -341,16 +341,18 @@ class CustomLayers {
             return html;
         });
 
+        /*
         layer.on('popupopen', event => {
             Utils.setHistoryState(undefined, undefined, this.#website_subdir);
             this.#interactive_map.getShareMarker().removeMarker();
         });
-
+        
         layer.on('popupclose', event => {
             if (this.isInEditMode()) return;
 
             this.#interactive_map.getShareMarker().prevent();
         });
+        */
     }
 
     /**
