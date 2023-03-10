@@ -60,7 +60,7 @@ html, body, #map {
 }
 
 .leaflet-container {
-    background: url('sea.png');
+    background: url('common/sea.png');
     background-size: 250px 250px;
     background-repeat: repeat;
 }
