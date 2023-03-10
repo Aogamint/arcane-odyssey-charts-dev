@@ -409,11 +409,16 @@ class InteractiveLayer {
             if (feature.properties.description) {
                 var description = document.createElement('p');
                 description.className = 'popup-description';
-                var span = document.createElement('span');
-                span.setAttribute('style', 'white-space: pre-wrap');
-                span.appendChild(document.createTextNode(feature.properties.description));
-                description.appendChild(span);
 
+                // Split description into an array
+                var contenttbl = feature.properties.description.split(",")
+                contenttbl.forEach((item, index) => {
+                var holder = document.createElement('div');
+                holder.className = 'popup-description-label'
+                holder.setAttribute('style', 'border-radius: 25px' ,'text-align: center' ,'display: inline-flex');
+                holder.appendChild(document.createTextNode(item));
+                description.appendChild(holder);
+                });
                 html.appendChild(description);
             }
 
