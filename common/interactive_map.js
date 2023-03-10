@@ -377,7 +377,8 @@ class InteractiveMap {
             container: 'sidebar',
             position: 'left'
         }).addTo(this.#map);
-
+        
+        /*
         // make resetting localStorage possible
         this.#sidebar.addPanel({
             id: 'reset',
@@ -412,6 +413,13 @@ class InteractiveMap {
                     this.#custom_layers.disableEditing();
                 }
             }
+        });*/
+
+        this.#sidebar.addPanel({
+            id: 'visit-github',
+            tab: '<i class="fab fa-github"></i>',
+            position: 'bottom',
+            button: website
         });
 
         this.#sidebar.addPanel({
