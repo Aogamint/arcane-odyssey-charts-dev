@@ -33,9 +33,9 @@ class Utils {
                 html: `
             <img class="map-marker-background" src="${background_path}" />
             `,
-                iconSize: [25, 41],
-                popupAnchor: [1, -34],
-                iconAnchor: [12, 41],
+                iconSize: [15, 15],
+                popupAnchor: [0, -10],
+                iconAnchor: [0, 0],
                 tooltipAnchor: [0, 0]
             });
         }
@@ -47,9 +47,9 @@ class Utils {
             <img class="map-marker-background" src="${background_path}" />
             <div class="map-marker-foreground-wrapper"><i class="fas ${icon_id} map-marker-foreground"></i></div>
             `,
-                iconSize: [25, 41],
-                popupAnchor: [1, -34],
-                iconAnchor: [12, 41],
+                iconSize: [15, 15],
+                popupAnchor: [0, -10],
+                iconAnchor: [0, 0],
                 tooltipAnchor: [0, 0]
             });
         } else if (icon_id.length > 2) {
@@ -59,9 +59,9 @@ class Utils {
                 <img class="map-marker-background" src="${background_path}" />
                 <div class="map-marker-foreground-wrapper"><img class='map-marker-foreground' src='images/icons/${icon_id}.png' /></div>
                 `,
-                iconSize: [25, 41],
-                popupAnchor: [1, -34],
-                iconAnchor: [12, 41],
+                iconSize: [15, 15],
+                popupAnchor: [0, -10],
+                iconAnchor: [0, 0],
                 tooltipAnchor: [0, 0]
             });
         } else if (icon_id.length < 3) {
@@ -71,9 +71,9 @@ class Utils {
             <img class="map-marker-background" src="${background_path}" />
             <div class="map-marker-foreground-wrapper"><p class="map-marker-foreground">${icon_id}</p></div>
             `,
-                iconSize: [25, 41],
-                popupAnchor: [1, -34],
-                iconAnchor: [12, 41],
+                iconSize: [15, 15],
+                popupAnchor: [0, -10],
+                iconAnchor: [0, 0],
                 tooltipAnchor: [0, 0]
             });
         }

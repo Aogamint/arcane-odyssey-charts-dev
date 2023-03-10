@@ -1,15 +1,6 @@
-<svg viewBox="0 0 500 820" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linecap: round;">
-  <defs>
-    <linearGradient x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.30025e-15,-37.566,37.566,2.30025e-15,416.455,540.999)" id="map-marker-fill">
-      <stop offset="0" stop-color="rgb(18,111,198)" />
-      <stop offset="1" stop-color="rgb(76,156,209)" />
-    </linearGradient>
-    <linearGradient x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.16666e-15,-19.053,19.053,1.16666e-15,414.482,522.486)" id="map-marker-stroke">
-      <stop offset="0" stop-color="rgb(46,108,151)" />
-      <stop offset="1" stop-color="rgb(56,131,183)" />
-    </linearGradient>
-  </defs>
-  <g transform="matrix(19.5417,0,0,19.5417,-7889.1,-9807.44)" id="map-marker-shape">
-    <path d="M416.544,503.612C409.971,503.612 404.5,509.303 404.5,515.478C404.5,518.256 406.064,521.786 407.194,524.224L416.5,542.096L425.762,524.224C426.892,521.786 428.5,518.433 428.5,515.478C428.5,509.303 423.117,503.612 416.544,503.612ZM416.544,510.767C419.128,510.784 421.223,512.889" stroke-width="1.1px" fill="url(#map-marker-fill)" stroke="url(#map-marker-stroke)" />
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="31px" height="31px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g><path style="opacity:0.549" fill="#0b0901" d="M 9.5,0.5 C 25.1515,-1.01478 31.6515,5.98522 29,21.5C 24.2417,29.1598 17.4084,31.6598 8.5,29C 0.896738,24.605 -1.60326,18.105 1,9.5C 2.68784,5.31481 5.52117,2.31481 9.5,0.5 Z"/></g>
+<g><path style="opacity:1" fill="#feff00" d="M 12.5,2.5 C 24.8767,3.25649 29.3767,9.58983 26,21.5C 21.3385,27.4073 15.5052,28.9073 8.5,26C 2.1416,20.8272 0.97493,14.6606 5,7.5C 7.16988,5.17694 9.66988,3.51027 12.5,2.5 Z"/></g>
 </svg>

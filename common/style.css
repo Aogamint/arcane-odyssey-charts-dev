@@ -108,15 +108,21 @@ html, body, #map {
 
 /* || Place icons in the middle of the marker */
 
+.map-marker-background {
+    width: 15px !important;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+
 .map-marker-foreground {
     width: 15px !important;
-    display: table-cell;
+    display: none;
     vertical-align: bottom;
     text-align: center;
 }
 
 .map-marker-foreground-wrapper {
-    display: table;
+    display: none;
     width: 15px;
     height: 15px;
     position: absolute;
