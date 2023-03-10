@@ -338,6 +338,58 @@ class CustomLayers {
             description_p.appendChild(description_input);
             html.appendChild(description_p);
 
+            var hightcliff_p = document.createElement('p');
+
+            var hc_label = document.createElement('label');
+            hc_label.htmlFor = description_input.id;
+            hc_label.innerHTML = 'Highcliff: ';
+
+            var hightcliff_input = document.createElement('input');
+            hightcliff_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Highcliff") != null) {
+                hightcliff_input.checked = true;
+            }
+
+            hightcliff_input.addEventListener('change', event => {
+                var tagStr = "Highcliff";
+                if (event.target.checked == true) {
+                    if (layer.feature.properties.tags == null || layer.feature.properties.tags == 'undefined' || layer.feature.properties.tags == '') {
+                        layer.feature.properties.tags = tagStr;
+                    } else {
+                        layer.feature.properties.tags += ","+tagStr;
+                    };
+                } else {
+                    if (layer.feature.properties.tags.match(tagStr) != null) {
+                        layer.feature.properties.tags = layer.feature.properties.tags.replace(tagStr, "");
+                    };
+
+                    if (layer.feature.properties.tags.endsWith(",")) {
+                        layer.feature.properties.tags = layer.feature.properties.tags.slice(-layer.feature.properties.tags.length + 1)
+                    }
+                }
+                console.log(layer.feature.properties.tags);
+                console.log(event.target.checked);
+            });
+
+            hightcliff_p.appendChild(hc_label);
+            hightcliff_p.appendChild(hightcliff_input);
+            html.appendChild(hightcliff_p);
+
+            var clearTags_p = document.createElement('p');
+
+            var clearTags_input = document.createElement('input');
+            clearTags_input.type = 'button';
+            clearTags_input.value = "Clear Tags";
+
+            clearTags_input.addEventListener('click', event => {
+                hightcliff_input.checked = false
+                layer.feature.properties.tags = ""
+            })
+
+            clearTags_p.appendChild(clearTags_input);
+            html.appendChild(clearTags_p);
+
             return html;
         });
 
