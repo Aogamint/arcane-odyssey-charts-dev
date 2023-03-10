@@ -171,6 +171,7 @@ html, body, #map {
 */
 
 .map-marker-ping {
+    display: none;
     background: #000000;
     border-radius: 50%;
     height: 14px;
@@ -187,6 +188,7 @@ html, body, #map {
 
 .map-marker-ping::before {
     content: "";
+    display: none;
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -200,6 +202,7 @@ html, body, #map {
 
 .map-marker-ping::after {
     content: "";
+    display: none;
     border-radius: 50%;
     height: 40px;
     width: 40px;
