@@ -55,7 +55,7 @@ class InteractiveMap {
         this.#setUpSidebar(params.attribution, params.website_source, this.#website_subdir);
 
         this.#user_layers = JSON.parse(localStorage.getItem(`${this.#website_subdir}:user_layers`));
-        this.#share_marker = new ShareMarker(this);
+        /*this.#share_marker = new ShareMarker(this);*/
         this.#custom_layers = new CustomLayers(this);
 
         this.#map.on('overlayadd', event => {
