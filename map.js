@@ -10,9 +10,9 @@
 // Initialize the map with basic information
 var interactive_map = new InteractiveMap('map', {
     // This will limit automatic zooming to this zoom level
-    max_good_zoom: 1,
+    max_good_zoom: 2,
     // This is the max zoom the map will allow
-    max_map_zoom: 4,
+    max_map_zoom: 6,
     website_source: 'https://github.com/Aogamint/arcane-odyssey-charts',
     website_subdir: 'arcane-odyssey-charts',
     attribution: `
@@ -28,7 +28,7 @@ var interactive_map = new InteractiveMap('map', {
 // https://github.com/commenthol/gdal2tiles-leaflet
 // `./gdal2tiles.py -l -p raster -w none -z 3-5 full_map.jpg map_tiles`
 interactive_map.addTileLayer('Ingame map', {
-    minNativeZoom: 1,
+    minNativeZoom: 2,
     maxNativeZoom: 4,
     attribution: 'Map from <a href="https://www.roblox.com/games/3272915504/">Arcane Odyssey</a>'
 });
@@ -45,7 +45,9 @@ interactive_map.addTileLayer('Ingame map', {
 // Add at least one marker layer
 // The order matters - they will appear in this order in the sidebar and layer control
 // See `marker_logic/collectibles.js` for a really basic layer
-addCollectibles(interactive_map);
+//addCollectibles(interactive_map);
+addRavenna(interactive_map);
+addCenter(interactive_map);
 
 // Step 3.5 (optional):
 // Add more marker layer

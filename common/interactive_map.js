@@ -32,10 +32,10 @@ class InteractiveMap {
         let defaults = {
             maxClusterRadius: 20,
             attribution: '',
-            max_good_zoom: 1,
+            max_good_zoom: 2,
             website_source: '',
             website_subdir: '',
-            max_map_zoom: 4
+            max_map_zoom: 6
         }
         let params = { ...defaults, ...args };
 
@@ -88,8 +88,8 @@ class InteractiveMap {
      */
     addTileLayer(name, args, url = `map_tiles/{z}/{x}/{y}.png`) {
         let defaults = {
-            minNativeZoom: 3,
-            maxNativeZoom: 5,
+            minNativeZoom: 2,
+            maxNativeZoom: 6,
             noWrap: true,
             detectRetina: true
         }
@@ -184,6 +184,7 @@ class InteractiveMap {
 
         // Center view over map
         this.zoomToBounds(this.#getBounds());
+        console.info(this.getLayers())
 
         // hide all previously checked marker
         this.getLayers().forEach((layer, layer_id) => {
