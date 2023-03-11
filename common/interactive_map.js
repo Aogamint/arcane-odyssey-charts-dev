@@ -340,7 +340,7 @@ class InteractiveMap {
             layer.removeAllHighlights();
         });
 
-        this.#share_marker.removeHighlight();
+        /*this.#share_marker.removeHighlight();*/
 
         this.#map.off('click', this.removeAllHighlights, this);
     }
