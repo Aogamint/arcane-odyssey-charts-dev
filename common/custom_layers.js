@@ -361,6 +361,9 @@ class CustomLayers {
             }
 
             /* Tags Input */
+            if (!layer.feature.properties.tags) {
+                layer.feature.properties.tags = ""
+            }
             /* Cliff */
             var cliff_p = document.createElement('p');
 
