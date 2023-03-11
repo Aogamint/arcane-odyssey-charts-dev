@@ -395,31 +395,33 @@ class InteractiveLayer {
             html.className = 'popup-id';
             html.id = `popup:${this.id}:${feature.properties.id}`;
 
+            var infoholder = document.createElement('div');
             var title = document.createElement('h2');
             title.className = 'popup-title';
             title.innerHTML = feature.properties.name ? feature.properties.name : feature.properties.id;
-
-            html.appendChild(title);
+            infoholder.appendChild(title)
+            html.appendChild(infoholder);
 
             let media_html = getPopupMedia(feature, this.id);
             if (media_html) {
                 html.appendChild(media_html);
             }
 
-            if (feature.properties.description) {
-                var description = document.createElement('p');
-                description.className = 'popup-description';
+            if (feature.properties.tags) {
+                var tags = document.createElement('p');
+                tags.className = 'popup-tags';
 
                 // Split description into an array
-                var contenttbl = feature.properties.description.split(",")
+                var contenttbl = feature.properties.tags.split(",")
                 contenttbl.forEach((item, index) => {
                 var holder = document.createElement('div');
-                holder.className = 'popup-description-label'
+                holder.className = 'popup-tag-label'
                 holder.setAttribute('style', 'border-radius: 25px' ,'text-align: center' ,'display: inline-flex');
+                    if (item == "Highcliff") {holder.setAttribute('style','background-color: red')}; 
                 holder.appendChild(document.createTextNode(item));
-                description.appendChild(holder);
+                tags.appendChild(holder);
                 });
-                html.appendChild(description);
+                infoholder.appendChild(tags);
             }
 
             // Checkbox requires a global counterpart

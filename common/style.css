@@ -94,14 +94,14 @@ html, body, #map {
     max-height: min(500px, 25vh);
 }
 
-.popup-description {
+.popup-tags {
     text-align: center;
     display: flex;
     justify-content:center;
     gap: 8px;
 }
 
-.popup-description-label {
+.popup-tag-label {
     text-align: center;
     display: inline-flex;
     border-radius: 25px;

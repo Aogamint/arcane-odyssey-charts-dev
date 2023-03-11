@@ -4,6 +4,7 @@ var ravenna = {
         {
             "type": "Feature",
             "properties": {
+                "tags": "Smallcliff,Highcliff,Sea Level,Decent Height",
                 "id": "ravenna_east_edge",
                 "name": "East",
                 "image_url": "https://trello.com/1/cards/64037da4ac7df0f1b3756758/attachments/64037dcbe166864fc06213a9/previews/64037dcce166864fc06214c5/download/image.png",
