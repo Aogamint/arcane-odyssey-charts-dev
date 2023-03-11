@@ -415,9 +415,16 @@ class InteractiveLayer {
                 var contenttbl = feature.properties.tags.split(",")
                 contenttbl.forEach((item, index) => {
                 var holder = document.createElement('div');
-                holder.className = 'popup-tag-label'
-                holder.setAttribute('style', 'border-radius: 25px' ,'text-align: center' ,'display: inline-flex');
-                    if (item == "Highcliff") {holder.setAttribute('style','background-color: red')}; 
+                holder.className = 'popup-tag-label';
+                    if (item == "High Cliff" || item == "Small Cliff") {holder.setAttribute('style','background-color: #fce6c6','color: black')} 
+                    else if (item == "Decent Height") {holder.setAttribute('style','background-color: #f5d3ce','color: black')}
+                    else if (item == "Sea Level") {holder.setAttribute('style','background-color: #bdecf3','color: black')}
+                    else if (item == "Half-way") {holder.setAttribute('style','background-color: #d3f6e4','color: black')}
+                    else if (item == "A few paces") {holder.setAttribute('style','background-color: #efb3ab','color: black')}
+                    else if (item == "Edge/Near Sea") {holder.setAttribute('style','background-color: #d6ecd2','color: black')}
+                    else if (item == "Ground") {holder.setAttribute('style','background-color: #d6ecd2','color: black')}
+                    else if (item == "Sand") {holder.setAttribute('style','background-color: #faf3c0','color: black')}
+                    else if (item == "Snow") {holder.setAttribute('style','background-color: #bcd9ea','color: black')}; 
                 holder.appendChild(document.createTextNode(item));
                 tags.appendChild(holder);
                 });

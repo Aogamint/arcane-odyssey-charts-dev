@@ -371,25 +371,25 @@ class CustomLayers {
             hightcliff_input.type = 'checkbox';
 
             var hc_label = document.createElement('label');
-            hc_label.innerHTML = 'Highcliff:';
+            hc_label.innerHTML = 'High Cliff:';
 
-            if (layer.feature.properties.tags.match("Highcliff") != null) {
+            if (layer.feature.properties.tags.match("High Cliff") != null) {
                 hightcliff_input.checked = true;
             }
 
-            hightcliff_input.addEventListener('change', event => {editTags(event.target.checked, "Highcliff");});
+            hightcliff_input.addEventListener('change', event => {editTags(event.target.checked, "High Cliff");});
 
             var smallcliff_input = document.createElement('input');
             smallcliff_input.type = 'checkbox';
 
             var sc_label = document.createElement('label');
-            sc_label.innerHTML = "Smallcliff:";
+            sc_label.innerHTML = "Small Cliff:";
 
-            if (layer.feature.properties.tags.match("Smallcliff") != null) {
+            if (layer.feature.properties.tags.match("Small Cliff") != null) {
                 smallcliff_input.checked = true;
             }
 
-            smallcliff_input.addEventListener('change', event => {editTags(event.target.checked, "Smallcliff");});
+            smallcliff_input.addEventListener('change', event => {editTags(event.target.checked, "Small Cliff");});
 
             cliff_p.appendChild(hc_label);
             cliff_p.appendChild(hightcliff_input);

@@ -105,11 +105,12 @@ html, body, #map {
     text-align: center;
     display: inline-flex;
     border-radius: 25px;
+    font-weight: bolder;
     background-color: aquamarine;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
     padding-top: 2px;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
 }
 
 .flex-grow-0 {
