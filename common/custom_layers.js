@@ -366,10 +366,8 @@ class CustomLayers {
 
             var hightcliff_input = document.createElement('input');
             hightcliff_input.type = 'checkbox';
-            hightcliff_input.id = layer._leaflet_id + ': tags';
 
             var hc_label = document.createElement('label');
-            hc_label.htmlFor = hightcliff_input.id;
             hc_label.innerHTML = 'Highcliff:';
 
             if (layer.feature.properties.tags.match("Highcliff") != null) {
@@ -380,10 +378,8 @@ class CustomLayers {
 
             var smallcliff_input = document.createElement('input');
             smallcliff_input.type = 'checkbox';
-            smallcliff_input.id = layer._leaflet_id + ': tags';
 
             var sc_label = document.createElement('label');
-            sc_label.htmlFor = smallcliff_input.id;
             sc_label.innerHTML = "Smallcliff:";
 
             if (layer.feature.properties.tags.match("Smallcliff") != null) {
@@ -403,7 +399,6 @@ class CustomLayers {
 
             var sealevel_input = document.createElement('input');
             sealevel_input.type = 'checkbox';
-            sealevel_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("Sea Level") != null) {
                 sealevel_input.checked = true;
@@ -412,12 +407,10 @@ class CustomLayers {
             sealevel_input.addEventListener('change', event => {editTags(event.target.checked, "Sea Level");});
 
             var sl_label = document.createElement('label');
-            sl_label.htmlFor = sealevel_input.id;
             sl_label.innerHTML = "Sea Level:";
 
             var decentheight_input = document.createElement('input');
             decentheight_input.type = 'checkbox';
-            decentheight_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("Decent Height") != null) {
                 decentheight_input.checked = true;
@@ -426,7 +419,6 @@ class CustomLayers {
             decentheight_input.addEventListener('change', event => {editTags(event.target.checked, "Decent Height");});
 
             var dh_label = document.createElement('label');
-            dh_label.htmlFor = decentheight_input.id;
             dh_label.innerHTML = "Decent Height:";
 
             height_p.appendChild(sl_label);
@@ -441,7 +433,6 @@ class CustomLayers {
 
             var afewpaces_input = document.createElement('input');
             afewpaces_input.type = 'checkbox';
-            afewpaces_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("A few paces") != null) {
                 afewpaces_input.checked = true;
@@ -450,12 +441,10 @@ class CustomLayers {
             afewpaces_input.addEventListener('change', event => {editTags(event.target.checked, "A few paces");});
 
             var afp_label = document.createElement('label');
-            afp_label.htmlFor = afewpaces_input.id;
             afp_label.innerHTML = "A few paces:";
 
             var haflway_input = document.createElement('input');
             haflway_input.type = 'checkbox';
-            haflway_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("Half-way") != null) {
                 haflway_input.checked = true;
@@ -464,12 +453,10 @@ class CustomLayers {
             haflway_input.addEventListener('change', event => {editTags(event.target.checked, "Half-way");});
 
             var hw_label = document.createElement('label');
-            hw_label.htmlFor = haflway_input.id;
             hw_label.innerHTML = "Half-way:";
 
             var edge_input = document.createElement('input');
             edge_input.type = 'checkbox';
-            edge_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("Edge/Near Sea") != null) {
                 edge_input.checked = true;
@@ -478,13 +465,12 @@ class CustomLayers {
             edge_input.addEventListener('change', event => {editTags(event.target.checked, "Edge/Near Sea");});
 
             var edge_label = document.createElement('label');
-            edge_label.htmlFor = edge_input.id;
             edge_label.innerHTML = "Edge/Near Sea:";
 
-            distance_p.appendChild(sl_label);
-            distance_p.appendChild(sealevel_input);
-            distance_p.appendChild(dh_label);
-            distance_p.appendChild(decentheight_input);
+            distance_p.appendChild(afp_label);
+            distance_p.appendChild(afewpaces_input);
+            distance_p.appendChild(hw_label);
+            distance_p.appendChild(haflway_input);
             distance_p.appendChild(edge_label);
             distance_p.appendChild(edge_input);
             html.appendChild(distance_p);
@@ -495,7 +481,6 @@ class CustomLayers {
 
             var ground_input = document.createElement('input');
             ground_input.type = 'checkbox';
-            ground_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("Ground") != null) {
                 ground_input.checked = true;
@@ -504,12 +489,10 @@ class CustomLayers {
             ground_input.addEventListener('change', event => {editTags(event.target.checked, "Ground");});
 
             var ground_label = document.createElement('label');
-            ground_label.htmlFor = ground_input.id;
             ground_label.innerHTML = "Ground:";
 
             var sand_input = document.createElement('input');
             sand_input.type = 'checkbox';
-            sand_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("Sand") != null) {
                 sand_input.checked = true;
@@ -518,12 +501,10 @@ class CustomLayers {
             sand_input.addEventListener('change', event => {editTags(event.target.checked, "Sand");});
 
             var sand_label = document.createElement('label');
-            sand_label.htmlFor = haflway_input.id;
             sand_label.innerHTML = "Sand:";
 
             var snow_input = document.createElement('input');
             snow_input.type = 'checkbox';
-            snow_input.id = layer._leaflet_id + ': tags';
 
             if (layer.feature.properties.tags.match("Snow") != null) {
                 snow_input.checked = true;
@@ -532,7 +513,6 @@ class CustomLayers {
             snow_input.addEventListener('change', event => {editTags(event.target.checked, "Snow");});
 
             var snow_label = document.createElement('label');
-            snow_label.htmlFor = edge_input.id;
             snow_label.innerHTML = "Snow:";
 
             material_p.appendChild(ground_label);
