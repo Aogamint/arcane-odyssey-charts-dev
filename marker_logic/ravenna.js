@@ -4,7 +4,7 @@
 function addRavenna(map) {
 
     // New layer with id `collectibles` from geoJSON `collectibles`
-    map.addInteractiveLayer('ravenna', ravenna, {
+    map.addInteractiveLayer('Ravenna', ravenna, {
 
         // The display name for this layer
         name: 'Ravenna',
@@ -23,7 +23,7 @@ function addRavenna(map) {
         // We don't have created a custom icon so let's use a generic one from Font Awesome
         // Omitting this uses the group icon in `images/icons/${this.id}.png` by default
         // This needs a html string or a function that return a html string
-        // sidebar_icon_html: '<i class="fas fa-gem"></i>',
+        sidebar_icon_html: '<h style="font-weight:bolder; justify-content: space-around; display: flex">Ra</h>',
 
         // We don't have created a custom icon so we have to manually provide a marker
         // Omitting this sets a marker with the group icon in `images/icons/${this.id}.png` by default
