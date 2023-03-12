@@ -4,7 +4,7 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "ENE1",
+                "id": "ENE-HW",
                 "name": "East North-East",
                 "image_url": "https://trello.com/1/cards/64048beff836b3c31c25db5c/attachments/64048c204d5e7042942e00b0/previews/preview/download/image.png",
                 "tags": "High Cliff,Half-way"
@@ -20,7 +20,7 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "E2",
+                "id": "E-HW",
                 "name": "East",
                 "image_url": "https://trello.com/1/cards/6405d913a1d256b800ed3bf6/attachments/6405d93e736e609d583ed9e5/download/image.png",
                 "tags": "High Cliff,Half-way"
@@ -36,7 +36,7 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "N4",
+                "id": "N-AFP-DH",
                 "name": "North",
                 "image_url": "https://trello.com/1/cards/640604358c1636b7a6fc415a/attachments/64060450d99283117667d36d/download/image.png",
                 "tags": "Decent Height,A few paces"
@@ -52,7 +52,7 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "NNW1",
+                "id": "NNW-HW",
                 "name": "North North-West",
                 "image_url": "https://trello.com/1/cards/6403691a9ca295dd89d86647/attachments/6403695fbf77a3b9646eed0f/download/image.png",
                 "description": "",
@@ -69,7 +69,7 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "NE2",
+                "id": "NE-AFP-DH",
                 "name": "North-East",
                 "image_url": "https://trello.com/1/cards/6405929071eece66d3c7cbde/attachments/640592b5ef84c0f498513137/previews/preview/download/image.png",
                 "tags": "Decent Height,A few paces"
@@ -85,7 +85,7 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "NNW1",
+                "id": "NNW-AFP-DH",
                 "name": "North North-West",
                 "image_url": "https://trello.com/1/cards/6405d85ef45724fd9bec3d9d/attachments/6405d87c09a84cfa37955bab/download/image.png",
                 "tags": "Decent Height,A few paces"
@@ -101,7 +101,7 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "NNW2",
+                "id": "NNW2-AFP-DH",
                 "name": "North North-West",
                 "image_url": "https://trello.com/1/cards/6405d85ef45724fd9bec3d9d/attachments/640a0aa8d2dd558ab881877f/download/image.png",
                 "tags": "Decent Height,A few paces"
@@ -118,7 +118,7 @@ var shellisland = {
             "type": "Feature",
             "properties": {
                 "tags": "Decent Height,A few paces",
-                "id": "E1",
+                "id": "E-AFP-DH",
                 "name": "East",
                 "image_url": "https://trello.com/1/cards/64058eb1398e91782103512f/attachments/64058ecef01b5e2162803c1a/download/image.png"
             },
@@ -134,7 +134,7 @@ var shellisland = {
             "type": "Feature",
             "properties": {
                 "tags": "High Cliff,Edge/Near Sea",
-                "id": "N1",
+                "id": "N-E",
                 "name": "North",
                 "image_url": "https://trello.com/1/cards/64043be78ebd8b1329ab7848/attachments/64043c12176e3960f46f0676/previews/preview/download/image.png"
             },
@@ -150,7 +150,7 @@ var shellisland = {
             "type": "Feature",
             "properties": {
                 "tags": "High Cliff,Edge/Near Sea",
-                "id": "N2",
+                "id": "N2-E",
                 "name": "North",
                 "image_url": "https://trello.com/1/cards/64043be78ebd8b1329ab7848/attachments/640451eb55ebe9580d2f73fa/previews/preview/download/image.png"
             },
@@ -165,8 +165,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "Edge/Near Sea",
-                "id": "N3",
+                "tags": "Edge/Near Sea,Ground",
+                "id": "N3-E",
                 "name": "North",
                 "image_url": "https://trello.com/1/cards/64049202cd7e9bcbeb618d31/attachments/6404922c43a5d519e19b91eb/previews/preview/download/image.png"
             },
@@ -181,8 +181,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Edge/Near Sea",
-                "id": "NE1",
+                "tags": "High Cliff,Edge/Near Sea,Ground",
+                "id": "NE-E",
                 "name": "North-East",
                 "image_url": "https://trello.com/1/cards/640579d3ec26531cd2070379/attachments/640579fcc961a0cdbbd83a7f/previews/preview/download/image.png"
             },
@@ -197,8 +197,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "NW1",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "NW-HW",
                 "name": "North-West",
                 "image_url": "https://trello.com/1/cards/640483f985bbd09e92d1c359/attachments/6404842d42c974b82b60f686/download/image.png"
             },
@@ -213,8 +213,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "S1",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "S-HW",
                 "name": "South",
                 "image_url": "https://trello.com/1/cards/640a0e1560f25836a06a2f00/attachments/640a0e30bdb42b11b48888bb/download/image.png"
             },
@@ -229,8 +229,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,A few paces",
-                "id": "SSE1",
+                "tags": "High Cliff,A few paces,Ground",
+                "id": "SSE-AFP",
                 "name": "South South-East",
                 "image_url": "https://trello.com/1/cards/64058f7795addc1b03a6d93e/attachments/64058f9509bc806ae19653d6/previews/preview/download/image.png"
             },
@@ -245,8 +245,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Edge/Near Sea",
-                "id": "SSE2",
+                "tags": "High Cliff,Edge/Near Sea,Ground",
+                "id": "SSE-E",
                 "name": "South South-East",
                 "image_url": "https://trello.com/1/cards/6405e6439d50862dee390262/attachments/6405e67245d0b2177d0bf6d8/previews/preview/download/image.png"
             },
@@ -261,8 +261,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "SSE3",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "SSE-HW",
                 "name": "South South-East",
                 "image_url": "https://trello.com/1/cards/6406026b1ecac63e7b0b9adb/attachments/64060284998047f56474af0c/previews/preview/download/image.png"
             },
@@ -277,8 +277,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "SE1",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "SE-HW",
                 "name": "South-East",
                 "image_url": "https://trello.com/1/cards/6405b4b4a4ea52861d2be121/attachments/6405b4c81142728cea79c5f3/previews/preview/download/image.png"
             },
@@ -293,8 +293,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,A few paces",
-                "id": "SW1",
+                "tags": "High Cliff,A few paces,Ground",
+                "id": "SW-AFP",
                 "name": "South-West",
                 "image_url": "https://trello.com/1/cards/64057d4ec8623b64b525556e/attachments/6406054914cb4bc1ec7915cb/previews/preview/download/image.png"
             },
@@ -309,8 +309,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "W1",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "W-E",
                 "name": "West",
                 "image_url": "https://trello.com/1/cards/640367b2c973ec5f5e503d07/attachments/640367d98aeaac7f9d1c3f67/previews/preview/download/image.png"
             },
@@ -325,8 +325,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "W2",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "W2-E",
                 "name": "West",
                 "image_url": "https://trello.com/1/cards/640367b2c973ec5f5e503d07/attachments/64046f8a325cdd355d599f43/previews/preview/download/image.png"
             },
@@ -341,8 +341,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "Edge/Near Sea",
-                "id": "W3",
+                "tags": "Edge/Near Sea,Ground",
+                "id": "W3-E",
                 "name": "West",
                 "image_url": "https://trello.com/1/cards/6404676f9f29379ac773230e/attachments/6404679315880ad26d725b35/download/image.png"
             },
@@ -357,8 +357,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Edge/Near Sea",
-                "id": "W4",
+                "tags": "High Cliff,Edge/Near Sea,Ground",
+                "id": "W4-E",
                 "name": "West",
                 "image_url": "https://trello.com/1/cards/64057231424af0168c8b8d55/attachments/64057252db19e872851dd415/download/image.png"
             },
@@ -373,8 +373,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "WSW1",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "WSW-HW",
                 "name": "West South-West",
                 "image_url": "https://trello.com/1/cards/64049a1d815de54b593e7d25/attachments/64049a46fe3ffd68ba5ecaf9/download/image.png",
                 "description": "Near the Ancient Cavern"
@@ -390,8 +390,8 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "WSW2",
+                "tags": "High Cliff,Half-way,Ground",
+                "id": "WSW2-HW",
                 "name": "West South-West",
                 "image_url": "https://trello.com/1/cards/64049a1d815de54b593e7d25/attachments/640a0ce0174cf2f243596d10/download/image.png"
             },
