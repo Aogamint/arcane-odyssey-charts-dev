@@ -47,6 +47,7 @@ interactive_map.addTileLayer('Ingame map', {
 // See `marker_logic/collectibles.js` for a really basic layer
 //addCollectibles(interactive_map);
 addRavenna(interactive_map);
+addShellIsland(interactive_map);
 
 // Step 3.5 (optional):
 // Add more marker layer
