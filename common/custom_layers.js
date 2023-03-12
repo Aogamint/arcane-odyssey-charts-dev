@@ -140,7 +140,7 @@ class CustomLayers {
 
         this.#edit_mode = true;
         this.#hideControls();
-        this.#interactive_map.getShareMarker().turnOff();
+        /*this.#interactive_map.getShareMarker().turnOff();*/
         Utils.setHistoryState(undefined, undefined, this.#website_subdir);
 
         this.#map.on('pm:create', event => {
@@ -211,6 +211,7 @@ class CustomLayers {
         this.disableEditing();
     }
 
+
     /**
      * Add an edit popup to a layer.
      * @param {L.Layer} layer The layer to add to
@@ -218,7 +219,6 @@ class CustomLayers {
     #createPopup(layer) {
         layer.bindPopup(() => {
             var html = document.createElement('div');
-
             var id_p = document.createElement('p');
 
             var id_input = document.createElement('input');
@@ -272,27 +272,27 @@ class CustomLayers {
             name_p.appendChild(name_input);
             html.appendChild(name_p);
 
-            var image_id_p = document.createElement('p');
+            var image_url_p = document.createElement('p');
 
-            var image_id_input = document.createElement('input');
-            image_id_input.setAttribute('type', 'text');
-            image_id_input.id = layer._leaflet_id + ':image_id';
+            var image_url_input = document.createElement('input');
+            image_url_input.setAttribute('type', 'text');
+            image_url_input.id = layer._leaflet_id + ':image_url';
 
-            var image_id_label = document.createElement('label');
-            image_id_label.htmlFor = image_id_input.id;
-            image_id_label.innerHTML = 'Image ID: ';
+            var image_url_label = document.createElement('label');
+            image_url_label.htmlFor = image_url_input.id;
+            image_url_label.innerHTML = 'Image ID: ';
 
-            if (layer.feature.properties.image_id) {
-                image_id_input.value = layer.feature.properties.image_id;
+            if (layer.feature.properties.image_url) {
+                image_url_input.value = layer.feature.properties.image_url;
             }
 
-            image_id_input.addEventListener('change', event => {
-                layer.feature.properties.image_id = event.target.value;
+            image_url_input.addEventListener('change', event => {
+                layer.feature.properties.image_url = event.target.value;
             });
 
-            image_id_p.appendChild(image_id_label);
-            image_id_p.appendChild(image_id_input);
-            html.appendChild(image_id_p);
+            image_url_p.appendChild(image_url_label);
+            image_url_p.appendChild(image_url_input);
+            html.appendChild(image_url_p);
 
             var video_id_p = document.createElement('p');
 
@@ -338,19 +338,235 @@ class CustomLayers {
             description_p.appendChild(description_input);
             html.appendChild(description_p);
 
+            /* Tags Function */
+            function editTags(checkedBool, tagStr) {
+                if (checkedBool) {
+                    if (layer.feature.properties.tags == null || layer.feature.properties.tags == 'undefined' || layer.feature.properties.tags == '') {
+                        layer.feature.properties.tags = tagStr;
+                    } else {
+                        layer.feature.properties.tags += ","+tagStr;
+                    };
+                } else {
+                    if (layer.feature.properties.tags.match(','+tagStr) != null) {
+                        layer.feature.properties.tags = layer.feature.properties.tags.replace(',' + tagStr, "");
+                    } else if (layer.feature.properties.tags.match(tagStr + ',') != null) {
+                        layer.feature.properties.tags = layer.feature.properties.tags.replace(tagStr + ',', "");
+                    } else if (layer.feature.properties.tags.match(tagStr) != null) {
+                        layer.feature.properties.tags = layer.feature.properties.tags.replace(tagStr, "");
+                    };
+                }
+        
+                console.log(layer.feature.properties.tags);
+                console.log(checkedBool);
+            }
+
+            /* Tags Input */
+            if (!layer.feature.properties.tags) {
+                layer.feature.properties.tags = ""
+            }
+            /* Cliff */
+            var cliff_p = document.createElement('p');
+
+            var hightcliff_input = document.createElement('input');
+            hightcliff_input.type = 'checkbox';
+
+            var hc_label = document.createElement('label');
+            hc_label.innerHTML = 'High Cliff:';
+
+            if (layer.feature.properties.tags.match("High Cliff") != null) {
+                hightcliff_input.checked = true;
+            }
+
+            hightcliff_input.addEventListener('change', event => {editTags(event.target.checked, "High Cliff");});
+
+            var smallcliff_input = document.createElement('input');
+            smallcliff_input.type = 'checkbox';
+
+            var sc_label = document.createElement('label');
+            sc_label.innerHTML = "Small Cliff:";
+
+            if (layer.feature.properties.tags.match("Small Cliff") != null) {
+                smallcliff_input.checked = true;
+            }
+
+            smallcliff_input.addEventListener('change', event => {editTags(event.target.checked, "Small Cliff");});
+
+            cliff_p.appendChild(hc_label);
+            cliff_p.appendChild(hightcliff_input);
+            cliff_p.appendChild(sc_label);
+            cliff_p.appendChild(smallcliff_input);
+            html.appendChild(cliff_p);
+
+            /* Height */
+            var height_p = document.createElement('p');
+
+            var sealevel_input = document.createElement('input');
+            sealevel_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Sea Level") != null) {
+                sealevel_input.checked = true;
+            }
+
+            sealevel_input.addEventListener('change', event => {editTags(event.target.checked, "Sea Level");});
+
+            var sl_label = document.createElement('label');
+            sl_label.innerHTML = "Sea Level:";
+
+            var decentheight_input = document.createElement('input');
+            decentheight_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Decent Height") != null) {
+                decentheight_input.checked = true;
+            }
+
+            decentheight_input.addEventListener('change', event => {editTags(event.target.checked, "Decent Height");});
+
+            var dh_label = document.createElement('label');
+            dh_label.innerHTML = "Decent Height:";
+
+            height_p.appendChild(sl_label);
+            height_p.appendChild(sealevel_input);
+            height_p.appendChild(dh_label);
+            height_p.appendChild(decentheight_input);
+            html.appendChild(height_p);
+
+            /* Distance */
+
+            var distance_p = document.createElement('p');
+
+            var afewpaces_input = document.createElement('input');
+            afewpaces_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("A few paces") != null) {
+                afewpaces_input.checked = true;
+            }
+
+            afewpaces_input.addEventListener('change', event => {editTags(event.target.checked, "A few paces");});
+
+            var afp_label = document.createElement('label');
+            afp_label.innerHTML = "A few paces:";
+
+            var haflway_input = document.createElement('input');
+            haflway_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Half-way") != null) {
+                haflway_input.checked = true;
+            }
+
+            haflway_input.addEventListener('change', event => {editTags(event.target.checked, "Half-way");});
+
+            var hw_label = document.createElement('label');
+            hw_label.innerHTML = "Half-way:";
+
+            var edge_input = document.createElement('input');
+            edge_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Edge/Near Sea") != null) {
+                edge_input.checked = true;
+            }
+
+            edge_input.addEventListener('change', event => {editTags(event.target.checked, "Edge/Near Sea");});
+
+            var edge_label = document.createElement('label');
+            edge_label.innerHTML = "Edge/Near Sea:";
+
+            distance_p.appendChild(afp_label);
+            distance_p.appendChild(afewpaces_input);
+            distance_p.appendChild(hw_label);
+            distance_p.appendChild(haflway_input);
+            distance_p.appendChild(edge_label);
+            distance_p.appendChild(edge_input);
+            html.appendChild(distance_p);
+
+            /* Material */
+
+            var material_p = document.createElement('p');
+
+            var ground_input = document.createElement('input');
+            ground_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Ground") != null) {
+                ground_input.checked = true;
+            }
+
+            ground_input.addEventListener('change', event => {editTags(event.target.checked, "Ground");});
+
+            var ground_label = document.createElement('label');
+            ground_label.innerHTML = "Ground:";
+
+            var sand_input = document.createElement('input');
+            sand_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Sand") != null) {
+                sand_input.checked = true;
+            }
+
+            sand_input.addEventListener('change', event => {editTags(event.target.checked, "Sand");});
+
+            var sand_label = document.createElement('label');
+            sand_label.innerHTML = "Sand:";
+
+            var snow_input = document.createElement('input');
+            snow_input.type = 'checkbox';
+
+            if (layer.feature.properties.tags.match("Snow") != null) {
+                snow_input.checked = true;
+            }
+
+            snow_input.addEventListener('change', event => {editTags(event.target.checked, "Snow");});
+
+            var snow_label = document.createElement('label');
+            snow_label.innerHTML = "Snow:";
+
+            material_p.appendChild(ground_label);
+            material_p.appendChild(ground_input);
+            material_p.appendChild(sand_label);
+            material_p.appendChild(sand_input);
+            material_p.appendChild(snow_label);
+            material_p.appendChild(snow_input);
+            html.appendChild(material_p);
+
+            /* Clear Tag Input */
+            var clearTags_p = document.createElement('p');
+
+            var clearTags_input = document.createElement('input');
+            clearTags_input.type = 'button';
+            clearTags_input.value = "Clear All Tags";
+
+            clearTags_input.addEventListener('click', event => {
+
+                hightcliff_input.checked = false
+                smallcliff_input.checked = false
+                sealevel_input.checked = false
+                decentheight_input.checked = false
+                afewpaces_input.checked = false
+                haflway_input.checked = false
+                edge_input.checked = false
+                ground_input.checked = false
+                sand_input.checked = false
+                snow_input.checked = false
+
+                layer.feature.properties.tags = ""
+            })
+
+            clearTags_p.appendChild(clearTags_input);
+            html.appendChild(clearTags_p);
+
             return html;
         });
 
+        /*
         layer.on('popupopen', event => {
             Utils.setHistoryState(undefined, undefined, this.#website_subdir);
             this.#interactive_map.getShareMarker().removeMarker();
         });
-
+        
         layer.on('popupclose', event => {
             if (this.isInEditMode()) return;
 
             this.#interactive_map.getShareMarker().prevent();
         });
+        */
     }
 
     /**

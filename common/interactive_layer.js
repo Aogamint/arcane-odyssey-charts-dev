@@ -395,31 +395,39 @@ class InteractiveLayer {
             html.className = 'popup-id';
             html.id = `popup:${this.id}:${feature.properties.id}`;
 
+            var infoholder = document.createElement('div');
             var title = document.createElement('h2');
             title.className = 'popup-title';
             title.innerHTML = feature.properties.name ? feature.properties.name : feature.properties.id;
-
-            html.appendChild(title);
+            infoholder.appendChild(title)
+            html.appendChild(infoholder);
 
             let media_html = getPopupMedia(feature, this.id);
             if (media_html) {
                 html.appendChild(media_html);
             }
-
-            if (feature.properties.description) {
-                var description = document.createElement('p');
-                description.className = 'popup-description';
+            if (feature.properties.tags) {
+                var tags = document.createElement('p');
+                tags.className = 'popup-tags';
 
                 // Split description into an array
-                var contenttbl = feature.properties.description.split(",")
+                var contenttbl = feature.properties.tags.split(",")
                 contenttbl.forEach((item, index) => {
                 var holder = document.createElement('div');
-                holder.className = 'popup-description-label'
-                holder.setAttribute('style', 'border-radius: 25px' ,'text-align: center' ,'display: inline-flex');
+                holder.className = 'popup-tag-label';
+                    if (item == "High Cliff" || item == "Small Cliff") {holder.setAttribute('style','background-color: #fce6c6','color: black')} 
+                    else if (item == "Decent Height") {holder.setAttribute('style','background-color: #f5d3ce','color: black')}
+                    else if (item == "Sea Level") {holder.setAttribute('style','background-color: #bdecf3','color: black')}
+                    else if (item == "Half-way") {holder.setAttribute('style','background-color: #d3f6e4','color: black')}
+                    else if (item == "A few paces") {holder.setAttribute('style','background-color: #efb3ab','color: black')}
+                    else if (item == "Edge/Near Sea") {holder.setAttribute('style','background-color: #d6ecd2','color: black')}
+                    else if (item == "Ground") {holder.setAttribute('style','background-color: #d6ecd2','color: black')}
+                    else if (item == "Sand") {holder.setAttribute('style','background-color: #faf3c0','color: black')}
+                    else if (item == "Snow") {holder.setAttribute('style','background-color: #bcd9ea','color: black')}; 
                 holder.appendChild(document.createTextNode(item));
-                description.appendChild(holder);
+                tags.appendChild(holder);
                 });
-                html.appendChild(description);
+                infoholder.appendChild(tags);
             }
 
             // Checkbox requires a global counterpart
@@ -469,7 +477,7 @@ class InteractiveLayer {
         layer.bindPopup(content, { maxWidth: "auto" });
 
         layer.on('popupopen', event => {
-            this.#interactive_map.getShareMarker().removeMarker();
+            /*this.#interactive_map.getShareMarker().removeMarker();*/
             Utils.setHistoryState(this.id, feature.properties.id);
 
             // Listen for size changes and update when it does
@@ -479,7 +487,7 @@ class InteractiveLayer {
         }, this);
 
         layer.on('popupclose', event => {
-            this.#interactive_map.getShareMarker().prevent();
+            /*this.#interactive_map.getShareMarker().prevent();*/
             Utils.setHistoryState(undefined, undefined, this.#website_subdir);
             this.#resize_observer.disconnect();
         }, this);
