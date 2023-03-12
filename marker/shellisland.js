@@ -279,7 +279,8 @@ var shellisland = {
             "properties": {
                 "tags": "High Cliff,Half-way",
                 "id": "SE1",
-                "name": "South-East"
+                "name": "South-East",
+                "image_url": "https://trello.com/1/cards/6405b4b4a4ea52861d2be121/attachments/6405b4c81142728cea79c5f3/previews/preview/download/image.png"
             },
             "geometry": {
                 "type": "Point",
