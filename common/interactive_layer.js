@@ -406,7 +406,6 @@ class InteractiveLayer {
             if (media_html) {
                 html.appendChild(media_html);
             }
-
             if (feature.properties.tags) {
                 var tags = document.createElement('p');
                 tags.className = 'popup-tags';
