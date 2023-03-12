@@ -48,6 +48,7 @@ interactive_map.addTileLayer('Ingame map', {
 //addCollectibles(interactive_map);
 addRavenna(interactive_map);
 addShellIsland(interactive_map);
+addCernunno(interactive_map);
 
 // Step 3.5 (optional):
 // Add more marker layer
