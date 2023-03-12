@@ -55,7 +55,7 @@ class InteractiveMap {
         this.#setUpSidebar(params.attribution, params.website_source, this.#website_subdir);
 
         this.#user_layers = JSON.parse(localStorage.getItem(`${this.#website_subdir}:user_layers`));
-        this.#share_marker = new ShareMarker(this);
+        /*this.#share_marker = new ShareMarker(this);*/
         this.#custom_layers = new CustomLayers(this);
 
         this.#map.on('overlayadd', event => {
@@ -184,7 +184,6 @@ class InteractiveMap {
 
         // Center view over map
         this.zoomToBounds(this.#getBounds());
-        console.info(this.getLayers())
 
         // hide all previously checked marker
         this.getLayers().forEach((layer, layer_id) => {
@@ -197,6 +196,9 @@ class InteractiveMap {
                 }
             });
         });
+
+        // Add an image overlay (mainly for map compass)
+        L.imageOverlay("common/compass.png",[[-195,-45],[-150,0]]).addTo(this.#map);
 
         // Search in url for marker and locate them
         const queryString = window.location.search;
@@ -338,7 +340,7 @@ class InteractiveMap {
             layer.removeAllHighlights();
         });
 
-        this.#share_marker.removeHighlight();
+        /*this.#share_marker.removeHighlight();*/
 
         this.#map.off('click', this.removeAllHighlights, this);
     }
@@ -436,12 +438,12 @@ class InteractiveMap {
 
             this.#map.addLayer(this.#interactive_layers.get(event.id).getGroup());
             Utils.setHistoryState(event.id);
-            this.getShareMarker().removeMarker();
+            /*this.getShareMarker().removeMarker();*/
         });
 
         this.#sidebar.on('closing', () => {
             Utils.setHistoryState(undefined, undefined, this.#website_subdir);
-            this.getShareMarker().removeMarker();
+            /*this.getShareMarker().removeMarker();*/
         })
     }
 
