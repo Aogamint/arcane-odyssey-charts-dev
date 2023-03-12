@@ -17,6 +17,7 @@ var interactive_map = new InteractiveMap('map', {
     website_subdir: 'arcane-odyssey-charts',
     attribution: `
     <li>For more info please visit our <a href="https://trello.com/b/gmwb1Vjb/arcane-odyssey-treasure-charts">Trello</a>
+    <li>Developers on this project are: aoga#1127 and notAKAI#2687 on Discord</a>
     <li>This project uses the template from <a href="https://github.com/interactive-game-maps/template">Interactive Game Maps</a></li>
 `
 });
