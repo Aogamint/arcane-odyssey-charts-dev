@@ -69,36 +69,6 @@ var shellisland = {
         {
             "type": "Feature",
             "properties": {
-                "id": "NNW1",
-                "name": "North North-West [HC][AFP]",
-                "image_url": "https://trello.com/1/cards/6405d85ef45724fd9bec3d9d/attachments/6405d87c09a84cfa37955bab/previews/preview/download/image.png"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    33.734375,
-                    -114.453125
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "id": "NNW2",
-                "name": "North North-West [HC][AFP]",
-                "image_url": "https://trello.com/1/cards/6405d85ef45724fd9bec3d9d/attachments/640a0aa8d2dd558ab881877f/previews/preview/download/image.png"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    34.15625,
-                    -114.1875
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "id": "NE2",
                 "name": "North-East",
                 "image_url": "https://trello.com/1/cards/6405929071eece66d3c7cbde/attachments/640592b5ef84c0f498513137/previews/preview/download/image.png",
@@ -316,22 +286,6 @@ var shellisland = {
                 "coordinates": [
                     36.1875,
                     -116.59375
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "tags": "High Cliff,Half-way",
-                "id": "E2",
-                "name": "East",
-                "image_url": "https://trello.com/1/cards/6405d913a1d256b800ed3bf6/attachments/6405d93e736e609d583ed9e5/download/image.png"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    36.832283,
-                    -114.804904
                 ]
             }
         },
