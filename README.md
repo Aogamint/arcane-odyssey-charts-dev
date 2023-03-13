@@ -1,12 +1,7 @@
 # Usage
-You can find specific locations we marked down through our finding on the maps, naming of the locations ID can be breakdown into chunks.
+You can find specific locations we marked down through our finding on the maps, naming of the locations ID can be breakdown into 2 chunks.
 
-[NW]-[HW]-[SL]
-
-##
-* NW stands for North-West
-* HW stands for Half-way
-* SL stands for Sea Level and so on.
+[Direction] [How far from the center]
 
 # Credits
 Interactive Game Maps for providing a template.
