@@ -13,7 +13,7 @@ var interactive_map = new InteractiveMap('map', {
     max_good_zoom: 2,
     // This is the max zoom the map will allow
     max_map_zoom: 6,
-    website_source: 'https://aogamint.github.io/arcane-odyssey-charts/',
+    website_source: 'https://github.com/Aogamint/arcane-odyssey-charts',
     website_subdir: 'arcane-odyssey-charts',
     attribution: `
     <li>For more info please visit our <a href="https://trello.com/b/gmwb1Vjb/arcane-odyssey-treasure-charts">Trello</a>

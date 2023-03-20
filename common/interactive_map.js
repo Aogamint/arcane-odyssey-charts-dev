@@ -425,16 +425,16 @@ class InteractiveMap {
         });
 
         this.#sidebar.addPanel({
-            id: 'attributions',
+            id: 'infos',
             tab: '<i class="fas fa-info-circle"></i>',
-            title: 'Attributions',
+            title: 'Infos',
             position: 'bottom',
-            pane: `<h3>This project uses:</h3><ul>${attribution}${this.#common_attribution}</ul>`
+            pane: `<h3>This project uses:</h3><ul>${attribution}${this.#common_attribution}</ul><br><h3>Notable Contributors:</h3><ul><li><strong>cursed snowman#2272</strong> for reaching out and contributed many charts.</li></ul>`
         });
 
         // make group visible on pane opening
         this.#sidebar.on('content', event => {
-            if (event.id == 'attributions') return;
+            if (event.id == 'infos') return;
 
             this.#map.addLayer(this.#interactive_layers.get(event.id).getGroup());
             Utils.setHistoryState(event.id);
