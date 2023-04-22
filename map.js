@@ -16,8 +16,9 @@ var interactive_map = new InteractiveMap('map', {
     website_source: 'https://github.com/Aogamint/arcane-odyssey-charts',
     website_subdir: 'arcane-odyssey-charts',
     attribution: `
-    <li><a href="https://www.example.com/index.html">$Thing</a> used by <a href="https://www.example.com/index.html">$person</a> under <a href="https://www.example.com/index.html">$license</a></li>
-    <li>This project uses sample images from <a href="https://picsum.photos/">picsum.photos</a></li>
+    <li>For more info please visit our <a href="https://trello.com/b/gmwb1Vjb/arcane-odyssey-treasure-charts">Trello</a>
+    <li>Developers on this project are: aoga#1127 and notAKAI#2687 on Discord</a>
+    <li>This project uses the template from <a href="https://github.com/interactive-game-maps/template">Interactive Game Maps</a></li>
 `
 });
 
@@ -49,6 +50,7 @@ interactive_map.addTileLayer('Ingame map', {
 addRavenna(interactive_map);
 addShellIsland(interactive_map);
 addCernunno(interactive_map);
+addFrostmill(interactive_map);
 
 // Step 3.5 (optional):
 // Add more marker layer
